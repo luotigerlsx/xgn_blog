@@ -1,0 +1,4 @@
+Django==1.10.4
+zinnia-theme-bootstrap
+django-app-namespace-template-loader
+django-blog-zinnia

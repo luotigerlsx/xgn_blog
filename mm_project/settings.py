@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.contenttypes',
     'django_comments',
-    'zinnia_bootstrap',
+    # 'zinnia_bootstrap',
+    # 'zinnia_foundation',
+    'theme',
     'mptt',
     'tagging',
     'zinnia',
@@ -67,7 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
-                'zinnia.context_processors.version',  # Optional
+                # 'zinnia.context_processors.version',  # Optional
             ],
             'loaders': [
                 'app_namespace.Loader',
@@ -130,10 +132,17 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static_file'),
 )
 
+# For local image display in debugging mode
 MEDIA_URL = '/media/'
 
 SITE_ID = 1
 
+# Zinnia short template
 ZINNIA_ENTRY_CONTENT_TEMPLATES = [
-    ('_short_entry_detail.html', 'Short entry template'),
+    ('theme/templates/zinnia/_short_entry_detail.html', 'Short entry template'),
 ]
+
+ZINNIA_MARKUP_LANGUAGE = 'markdown'
+
+# ZINNIA_ENTRY_BASE_MODEL = 'blogimages.models.EntryGallery'
+# MIGRATION_MODULES = {'zinnia': 'blogimages.zinnia_migrations'}

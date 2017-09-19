@@ -37,8 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.contenttypes',
     'django_comments',
-    # 'zinnia_bootstrap',
-    # 'zinnia_foundation',
     'theme',
     'mptt',
     'tagging',
